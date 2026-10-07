@@ -1,0 +1,680 @@
+/* =======================================================
+   PALETA CROMÁTICA VIBRARTE Y VARIABLES CSS
+   ======================================================= */
+:root {
+    /* Códigos exactos de la guía corporativa */
+    --naranja-marca: #FF7723;       /* C:00 M:64 Y:86 K:00 */
+    --teal-marca: #1B9A91;          /* C:78 M:16 Y:48 K:2 */
+    --amarillo-marca: #F1C40F;      /* C:7 M:22 Y:93 K:00 */
+    --negro-marca: #000000;         /* C:00 M:00 Y:00 K:100 */
+    --blanco-marca: #FFFFFF;        /* C:00 M:00 Y:00 K:0 */
+    
+    /* Variaciones armónicas para fondos por sección */
+    --fondo-amarillo-suave: #FFFDF0;
+    --fondo-gris-suave: #F3F4F6;
+    --fondo-teal-claro: #E6F4F3;
+    --fondo-crema: #FFF8F2;
+    --teal-oscuro: #116862;
+
+    /* Fuentes exactas */
+    --fuente-titulos: 'Retrograde Regular', Georgia, serif;
+    --fuente-cuerpo: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Reset inicial */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+}
+
+/* =======================================================
+   1. HEADER (Fondo Blanco)
+   ======================================================= */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco-marca);
+    padding: 15px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--naranja-marca);
+}
+
+.logo-texto {
+    font-family: var(--fuente-titulos);
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--naranja-marca);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.menu a {
+    color: var(--negro-marca);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: var(--teal-marca);
+    color: var(--blanco-marca);
+}
+
+/* =======================================================
+   2. HERO - SECCIÓN 1 (Fondo Azul Teal)
+   ======================================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 6%;
+    background-color: var(--teal-marca);
+    color: var(--blanco-marca);
+    gap: 40px;
+}
+
+.hero-columna-texto {
+    flex: 1;
+}
+
+.badge-destacado {
+    display: inline-block;
+    background-color: var(--amarillo-marca);
+    color: var(--negro-marca);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-columna-texto h2 {
+    font-size: 38px;
+    color: var(--blanco-marca);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero .eslogan {
+    font-size: 22px;
+    color: var(--amarillo-marca);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero .descripcion {
+    font-size: 16px;
+    color: #E0F2F1;
+    margin-bottom: 30px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+}
+
+.boton-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.boton-cta.principal {
+    background-color: var(--naranja-marca);
+    color: var(--blanco-marca);
+}
+
+.boton-cta.principal:hover {
+    background-color: #E06010;
+    transform: translateY(-2px);
+}
+
+.boton-cta.secundario {
+    background-color: transparent;
+    color: var(--blanco-marca);
+    border: 2px solid var(--blanco-marca);
+}
+
+.boton-cta.secundario:hover {
+    background-color: var(--blanco-marca);
+    color: var(--teal-marca);
+}
+
+.hero-columna-imagen {
+    flex: 1;
+}
+
+.marco-imagen {
+    border: 4px solid var(--amarillo-marca);
+    border-radius: 16px;
+    padding: 8px;
+    background-color: var(--blanco-marca);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.marco-imagen img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* =======================================================
+   3. NOSOTROS - SECCIÓN 2 (Fondo Blanco)
+   ======================================================= */
+.nosotros {
+    display: flex;
+    align-items: center;
+    padding: 60px 6%;
+    gap: 50px;
+    background-color: var(--blanco-marca);
+    color: var(--negro-marca);
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    border-radius: 12px;
+    box-shadow: -10px 10px 0px var(--naranja-marca);
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    font-size: 32px;
+    color: var(--teal-marca);
+    margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* =======================================================
+   4. PROFESORAS - SECCIÓN 3 (Fondo Amarillo Suave)
+   ======================================================= */
+.profesores {
+    padding: 60px 6%;
+    background-color: var(--fondo-amarillo-suave);
+    text-align: center;
+}
+
+.profesores h2 {
+    font-size: 32px;
+    color: var(--naranja-marca);
+    margin-bottom: 5px;
+}
+
+.subtitulo-seccion {
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.profesores-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.tarjeta-profesor {
+    background-color: var(--blanco-marca);
+    border-radius: 16px;
+    width: 320px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid var(--amarillo-marca);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-profesor:hover {
+    transform: translateY(-5px);
+}
+
+.foto-profesor-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--naranja-marca), var(--teal-marca));
+    margin-bottom: 15px;
+}
+
+.foto-profesor-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tarjeta-profesor h3 {
+    color: var(--negro-marca);
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.rol-profesor {
+    display: inline-block;
+    background-color: var(--teal-marca);
+    color: var(--blanco-marca);
+    font-weight: bold;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-profesor p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* =======================================================
+   5. SERVICIOS - SECCIÓN 4 (Fondo Naranja Vibrante)
+   ======================================================= */
+.servicios {
+    padding: 60px 6%;
+    background-color: var(--naranja-marca);
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 32px;
+    color: var(--blanco-marca);
+    margin-bottom: 5px;
+}
+
+.subtitulo-seccion-claro {
+    color: var(--amarillo-marca);
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: var(--blanco-marca);
+    border-radius: 12px;
+    width: 310px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--teal-marca);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.etiqueta-modalidad {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--naranja-marca);
+    background-color: #FFF0E6;
+    padding: 6px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.boton-tarjeta {
+    display: block;
+    background-color: var(--naranja-marca);
+    color: var(--blanco-marca);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-tarjeta:hover {
+    background-color: var(--teal-marca);
+}
+
+/* =======================================================
+   6. BENEFICIOS - SECCIÓN 5 (Fondo Gris Claro)
+   ======================================================= */
+.beneficios {
+    padding: 60px 6%;
+    background-color: var(--fondo-gris-suave);
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 32px;
+    color: var(--teal-marca);
+    margin-bottom: 40px;
+}
+
+.beneficios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.beneficio-item {
+    background-color: var(--blanco-marca);
+    flex: 1;
+    min-width: 260px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border-top: 5px solid var(--amarillo-marca);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.icono-box {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.beneficio-item h3 {
+    color: var(--naranja-marca);
+    margin-bottom: 10px;
+}
+
+/* =======================================================
+   7. TABLA - SECCIÓN 6 (Fondo Menta Teal Claro)
+   ======================================================= */
+.seccion-tabla {
+    padding: 60px 6%;
+    background-color: var(--fondo-teal-claro);
+    text-align: center;
+}
+
+.seccion-tabla h2 {
+    font-size: 32px;
+    color: var(--teal-oscuro);
+    margin-bottom: 30px;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--blanco-marca);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 18px;
+    border: 1px solid #D0E8E6;
+    text-align: left;
+}
+
+th {
+    background-color: var(--teal-marca);
+    color: var(--blanco-marca);
+    font-family: var(--fuente-titulos);
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #F2FAF9;
+}
+
+/* =======================================================
+   8. GALERÍA - SECCIÓN 7 (Fondo Teal Oscuro)
+   ======================================================= */
+.galeria {
+    padding: 60px 6%;
+    background-color: var(--teal-oscuro);
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 32px;
+    color: var(--amarillo-marca);
+    margin-bottom: 30px;
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--amarillo-marca);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.galeria-contenedor img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+/* =======================================================
+   9. CONTACTO - SECCIÓN 8 (Fondo Crema)
+   ======================================================= */
+.contacto {
+    padding: 60px 6%;
+    background-color: var(--fondo-crema);
+}
+
+.contacto h2 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--naranja-marca);
+    margin-bottom: 30px;
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--blanco-marca);
+    padding: 35px;
+    border-radius: 12px;
+    border-top: 6px solid var(--teal-marca);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--negro-marca);
+}
+
+.campo input, .campo select, .campo textarea {
+    padding: 12px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 14px;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    outline: none;
+    border-color: var(--teal-marca);
+}
+
+.boton-enviar {
+    background-color: var(--teal-marca);
+    color: var(--blanco-marca);
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--naranja-marca);
+}
+
+/* =======================================================
+   10. FOOTER - SECCIÓN 9 (Fondo Negro Corporativo)
+   ======================================================= */
+.pie-pagina {
+    background-color: var(--negro-marca);
+    color: var(--blanco-marca);
+    text-align: center;
+    padding: 40px 6%;
+    border-top: 4px solid var(--naranja-marca);
+}
+
+.pie-pagina h3 {
+    color: var(--naranja-marca);
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.eslogan-footer {
+    color: var(--amarillo-marca);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.info-footer p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.derechos {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* =======================================================
+   RESPONSIVE (DISPOSITIVOS MÓVILES)
+   ======================================================= */
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .nosotros {
+        flex-direction: column;
+    }
+
+    .galeria-contenedor img {
+        width: 100%;
+    }
+    /* Contenedor del círculo */
+.foto-profesor-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--naranja-marca), var(--teal-marca));
+    margin-bottom: 15px;
+    overflow: hidden; /* Corta cualquier elemento que sobresalga del círculo */
+}
+
+/* Imagen de la profesora */
+.foto-profesor-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+    border-radius: 50%;
+}
+}
