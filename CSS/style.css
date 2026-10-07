@@ -629,23 +629,56 @@ tr:nth-child(even) {
 }
 
 /* =======================================================
-   RESPONSIVE (DISPOSITIVOS MÓVILES)
+   RESPONSIVE (DISPOSITIVOS MÓVILES) Y ESTILOS FINALES
    ======================================================= */
+
+/* Estilos de las profesoras (fuera del media query) */
+.foto-profesor-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--naranja-marca), var(--teal-marca));
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.foto-profesor-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Reglas especiales para celulares */
 @media (max-width: 768px) {
     .encabezado {
+        position: relative !important;
         flex-direction: column;
-        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .logo-imagen, .logo-contenedor img {
+        height: 45px !important;
     }
 
     .menu ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center;
+        gap: 5px 8px !important;
+        padding-top: 10px;
+    }
+
+    .menu a {
+        font-size: 13px !important;
+        padding: 4px 8px !important;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 30px 5%;
     }
 
     .hero-botones {
@@ -659,22 +692,4 @@ tr:nth-child(even) {
     .galeria-contenedor img {
         width: 100%;
     }
-    /* Contenedor del círculo */
-.foto-profesor-wrapper {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    padding: 5px;
-    background: linear-gradient(135deg, var(--naranja-marca), var(--teal-marca));
-    margin-bottom: 15px;
-    overflow: hidden; /* Corta cualquier elemento que sobresalga del círculo */
-}
-
-/* Imagen de la profesora */
-.foto-profesor-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la foto sin deformarla */
-    border-radius: 50%;
-}
 }
